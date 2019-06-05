@@ -1,0 +1,8 @@
+# editor
+*.vscode
+
+# cache
+*.pyc
+
+# environment
+venv
