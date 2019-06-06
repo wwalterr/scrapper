@@ -10,9 +10,7 @@ class Login(scrapy.Spider):
 
     url = 'https://auth.mygov.in/user/login'
 
-    start_urls = [
-        url
-    ]
+    start_urls = [url]
 
     def parse(self, response):
         form_build_id = response.css(
