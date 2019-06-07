@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as ec
 
 from selenium.webdriver.common.by import By
 
-from os import getcwd, path
+from os import getcwd, path, makedirs
 
 from time import sleep
 
@@ -26,8 +26,21 @@ class Data(Spider):
     ]
 
     @classmethod
+    def check_folder(cls, name):
+        folder_path = path.join(getcwd(), name)
+
+        if not path.exists(folder_path):
+            print(f'Folder {name} created')
+
+            makedirs(folder_path)
+
+        print(f'Folder {name} already exists')
+
+    @classmethod
     def chrome_options(cls):
         options = webdriver.ChromeOptions()
+
+        Data.check_folder('csv')
 
         preferences = {
             # Define the folder to save file (s)
@@ -78,7 +91,7 @@ class Data(Spider):
             # Click on submit
             driver.find_element_by_xpath('//*[@id=\'edit-submit\']').click()
 
-            sleep(2.5);
+            sleep(5)
 
             # Close opened window
             window_before = driver.window_handles[0]

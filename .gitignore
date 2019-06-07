@@ -3,7 +3,7 @@
 
 # cache
 *.pyc
-csv/*.csv
+csv
 
 # environment
 venv
