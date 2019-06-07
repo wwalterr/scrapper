@@ -1,0 +1,38 @@
+export PATH=$PATH:/home/pc/Downloads/Project/selenium.webdriver.4.0.0-alpha-01.nupkg
+
+chmod a+x selenium.webdriver.4.0.0-alpha-01.nupkg
+
+chrome 74
+
+https://chromedriver.storage.googleapis.com/index.html?path=74.0.3729.6/
+
+https://sites.google.com/a/chromium.org/chromedriver/downloads
+
+https://seleniumhq.github.io/selenium/docs/api/py/
+
+https://stackoverflow.com/questions/16180428/can-selenium-webdriver-open-browser-windows-silently-in-background
+
+RUNNNNNNNNN no readme
+
+doc pro daat.py e login.py, function que verifica se o folder csv existe, main.py para iniciar o login e o data (verificar se está logado...)
+
+# The fields of the URL are described below:
+    # 
+    # query:
+    #   the value that will be used to search documents
+    #
+    # field_search:
+    #   - title: search only in the document's title
+    #   - body: search only in the document's body
+    #   - field_keywords: search only in the document's keywords
+    #   
+    #   if the field is empty, all the field_search types are going to be used
+    #
+    # item:
+    #   the amount of documents returned in each page: 10, 20, 30, 50 or 100
+    # 
+    # exact_match:
+    #   specify if the query value need to be exactly the same in the document,
+    #   i.g in the field_search chosen
+
+    edit-download-reasons-commercial

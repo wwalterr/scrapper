@@ -2,6 +2,8 @@
 
 🏤 Scrapper that download CSV files using Selenium and Scrapy to run trough web pages, make login, open subpages, assign fields, etc.
 
+> Warning: A scrapper can break if the page (s) the scrapper is crawling has been changed, for that its necessary to update some HTML element selector (s). To update some selectors you can manually find the classes, ids, tags, etc; or use the [xPath Finder](https://chrome.google.com/webstore/detail/xpath-finder/ihnknokegkbpmofmafnkoadfjkhlogph) extension on Google Chrome, to easily find the xPath pattern
+
 #### Setup
 
 This tutorial assumes that the OS is based on Unix / Linux.
