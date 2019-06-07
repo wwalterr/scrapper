@@ -1,5 +1,7 @@
 import scrapy
 
+__all__ = ['Login']
+
 
 class Login(scrapy.Spider):
     name = 'Login'

@@ -12,6 +12,8 @@ from os import getcwd, path, makedirs
 
 from time import sleep
 
+__all__ = ['Data']
+
 # It is also possible to download the files through the id
 # of the document, present in the body tag, and the URL:
 #
@@ -90,7 +92,9 @@ class Data(Spider):
 
             # Click on submit
             driver.find_element_by_xpath('//*[@id=\'edit-submit\']').click()
-
+            
+            # Wait the download page loads, if your connection it's fast you can decrease
+            # the value below to improve the scrapper speed
             sleep(5)
 
             # Close opened window
