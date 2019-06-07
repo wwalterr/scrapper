@@ -74,8 +74,10 @@ class Data(Spider):
             driver.get(link)
 
             # Click on a CSV link banner
-            driver.find_element_by_xpath(
-                '//html/body/div[1]/div[1]/div/div[7]/div/div[2]/section/div/div/div/div/div/article/div/div/div[2]/div/div[1]/div/div[2]/div/a'
+            WebDriverWait(driver, 5).until(
+                ec.visibility_of_element_located(
+                    (By.XPATH, '//html/body/div[1]/div[1]/div/div[7]/div/div[2]/section/div/div/div/div/div/article/div/div/div[2]/div/div[1]/div/div[2]/div/a')
+                )
             ).click()
 
             # Click on usage type label (non-commercial)

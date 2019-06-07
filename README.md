@@ -134,6 +134,8 @@ Or run all the available scrappers through the *main.py* file.
 $ python main.py
 ```
 
+See the [examples](./examples).
+
 #### Debug
 
 <details>
@@ -182,6 +184,12 @@ This will stop the execution and start a shell with all the variables and functi
 
 You can also debug via VSCode debug, this is a great tool and offers a lot of functionalities.
 </details>
+
+#### Style Guide
+
+This repository uses the [Auto PEP 8](https://github.com/hhatto/autopep8) tool that automatically formats Python code to conform to the PEP 8 style guide, along with the [Prettier](https://github.com/prettier/prettier-vscode) VSCode extenssion to format code, normally using auto PEP 8, [Pylint](https://www.pylint.org/) or [Yapf](https://github.com/google/yapf).
+
+Consider to use the tools to maintain a concise code base.
 
 #### Credits
 
