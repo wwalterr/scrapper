@@ -10,8 +10,6 @@ If this file it's not formated, try to open it using the [Slack Edit](https://st
 
 This tutorial assumes that the OS is based on Unix / Linux.
 
-
-
 <details>
 <summary>Google Chrome Drive</summary>
   
@@ -34,12 +32,6 @@ $ chmod a+x  chromedriver
 
 Let the driver in the base of this repository.
 </details>
-
-
-
-
-
-
 
 <details>
 <summary>Python 3</summary>
@@ -134,7 +126,7 @@ Or run all the available scrappers through the *main.py* file.
 $ python main.py
 ```
 
-See the [examples](./examples).
+See the [examples](./examples). For the *data.py*, read the [data.md](./data.md) documentation.
 
 #### Debug
 

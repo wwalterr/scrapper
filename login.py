@@ -2,13 +2,17 @@ import scrapy
 
 __all__ = ['Login']
 
+# If you're already logged in, you'll be redirected and
+# the profile data will be shown like if it was the first
+# login made
+
 
 class Login(scrapy.Spider):
     name = 'Login'
 
-    user_name = 'luisrsporra@gmail.com'
+    user_name = ''
 
-    user_pass = 'Luis123456'
+    user_pass = ''
 
     url = 'https://auth.mygov.in/user/login'
 
