@@ -26,6 +26,10 @@ If the field is empty, all the field_search types are going to be used
    
 Specify if the query value needs to be exactly the same in the document, i.g in the field_search chosen
 
+5. page
+
+The number of the page: 1, 2, 3...
+
 ### Example
 
 The following its an example of a query:

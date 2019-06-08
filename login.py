@@ -6,9 +6,9 @@ __all__ = ['Login']
 class Login(scrapy.Spider):
     name = 'Login'
 
-    user_name = ''
+    user_name = 'luisrsporra@gmail.com'
 
-    user_pass = ''
+    user_pass = 'Luis123456'
 
     url = 'https://auth.mygov.in/user/login'
 
@@ -32,5 +32,4 @@ class Login(scrapy.Spider):
         )
 
     def parse_login(self, response):
-        # User profile data
-        yield response.xpath('//div[@class=\'field-item even\']/text()').getall()
+        self.log(response.xpath('//div[@class=\'field-item even\']/text()').getall())
