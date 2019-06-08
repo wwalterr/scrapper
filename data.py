@@ -18,13 +18,15 @@ __all__ = ['Data']
 # of the document, present in the body tag, and the URL:
 #
 # https://data.gov.in/node/id/download
-
+# 
+# Try to don't resize the window in a way that Selenium 
+# can't scroll, e.g extreme small in the vertical axis
 
 class Data(Spider):
     name = 'Data'
 
     start_urls = [
-        r'https://data.gov.in/search/site?query=maharajganj&field_search=title%5E2&item=100&exact_match=1'
+        r'https://data.gov.in/search/site?query=maharajganj&field_search=title%5E2&item=10&exact_match=1'
     ]
 
     @classmethod
@@ -72,12 +74,12 @@ class Data(Spider):
 
         for link in links:
             driver.get(link)
+            
+            sleep(1.5)
 
             # Click on a CSV link banner
-            WebDriverWait(driver, 5).until(
-                ec.visibility_of_element_located(
-                    (By.XPATH, '//html/body/div[1]/div[1]/div/div[7]/div/div[2]/section/div/div/div/div/div/article/div/div/div[2]/div/div[1]/div/div[2]/div/a')
-                )
+            driver.find_element_by_xpath(
+                '//html/body/div[1]/div[1]/div/div[7]/div/div[2]/section/div/div/div/div/div/article/div/div/div[2]/div/div[1]/div/div[2]/div/a'
             ).click()
 
             # Click on usage type label (non-commercial)
@@ -97,12 +99,13 @@ class Data(Spider):
             
             # Wait the download page loads, if your connection it's fast you can decrease
             # the value below to improve the scrapper speed
-            sleep(5)
+            sleep(3)
 
             # Close opened window
             window_before = driver.window_handles[0]
 
-            window_after = driver.window_handles[1]
+            if len(driver.window_handles) >= 2:
+                window_after = driver.window_handles[1]
 
             driver.switch_to_window(window_after)
 
