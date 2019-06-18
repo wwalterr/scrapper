@@ -111,6 +111,9 @@ To run the available scripts you need to be inside the virtual environment with 
 
 > Before run the scripts, go to each one and change the data required, e.g username and password in the login.py and the query in the data.py
 
+<details>
+<summary>Specific</summary>
+
 ```sh
 # Make login in the platform
 $ scrapy runspider login.py
@@ -118,13 +121,16 @@ $ scrapy runspider login.py
 # Download CSV files from the platform / specific query
 $ scrapy runspider login.py
 ```
+</details>
 
-Or run all the available scrappers through the *main.py* file.
+<details>
+<summary>All</summary>
 
 ```sh
 # Run all scrappers
 $ python main.py
 ```
+</details>
 
 See the [examples](./examples). For the *data.py*, read the [data.md](./data.md) documentation.
 
